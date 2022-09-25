@@ -8,17 +8,18 @@ public class Item {
     private Integer quantidade;
     private Integer id;
 
+    //Construtor vazio
     public Item (){
 
     }
-
+    //Construtor com alguns parametros
     public Item(Integer id, String descriccao, Integer quantidade, double precoUnitario) {
         this.precoUnitario = precoUnitario;
         this.descriccao = descriccao;
         this.quantidade = quantidade;
         this.id = id;
     }
-
+    //Metodo para calcular valor total do item ja com desconto
     public double getAjustePrecoTotal(){
         double total = this.precoUnitario * this.quantidade;
         double totalDesconto = total * this.desconto;
@@ -26,6 +27,7 @@ public class Item {
         return totalComDesconto;
     }
 
+    //Metodos Acessores
     public double getPrecoUnitario() {
         return precoUnitario;
     }
